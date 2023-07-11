@@ -1,0 +1,13 @@
+#: locale=en
+
+## Media
+
+### Title
+model_162FD548_0CEC_3250_41B9_4948CF1E6C61.label = R S Truck All lights On Bright
+
+## Tour
+
+### Description
+
+### Title
+tour.name = Pre-Trip Truck Lights on
