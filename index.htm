@@ -2,23 +2,23 @@
 <html lang="en">
   <head>
     <title>Pre-Trip Truck Lights on</title>
-    <script type="text/javascript">
-      document.addEventListener("contextmenu", function (event) {
-        // Get all div elements in the document
-        var divElements = document.getElementsByTagName("div");
-
-        // Loop through each div element
-        for (var i = 0; i < divElements.length; i++) {
-          var div = divElements[i];
-
-          // Check if the div element has a class attribute
-          if (!div.hasAttribute("class")) {
-            // Remove the div element
-            div.parentNode.removeChild(div);
+    <script>
+        // Function to remove div elements containing "3DVista"
+        function removeDivsWithText() {
+          const divElements = document.getElementsByTagName('div');
+    
+          for (let i = divElements.length - 1; i >= 0; i--) {
+            const div = divElements[i];
+    
+            if (div.textContent.includes('3DVista')) {
+              div.parentNode.removeChild(div);
+            }
           }
         }
-      });
-    </script>
+    
+        // Run the function every second
+        setInterval(removeDivsWithText, 1000);
+      </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta
       name="viewport"
