@@ -3,19 +3,9 @@
   <head>
     <title>Pre-Trip Truck Lights on</title>
     <script type="text/javascript">
-      // Get all div elements in the document
-      var divElements = document.getElementsByTagName("div");
-
-      // Loop through each div element
-      for (var i = 0; i < divElements.length; i++) {
-        var div = divElements[i];
-
-        // Check if the div element has a class attribute
-        if (!div.hasAttribute("class")) {
-          // Remove the div element
-          div.parentNode.removeChild(div);
-        }
-      }
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta
