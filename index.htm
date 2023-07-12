@@ -3,23 +3,25 @@
   <head>
     <title>Pre-Trip Truck Lights on</title>
     <script>
-      // Function to remove elements containing "3DVista"
-      function removeElementsWithText() {
-        const elements = document.querySelectorAll("*");
-
-        for (let i = elements.length - 1; i >= 0; i--) {
-          const element = elements[i];
-
-          if (element.textContent.includes("3DVista")) {
-            element.parentNode.removeChild(element);
+        // Function to remove elements containing "3DVista"
+        function removeElementsWithText() {
+          const elements = document.querySelectorAll('*');
+    
+          for (let i = elements.length - 1; i >= 0; i--) {
+            const element = elements[i];
+    
+            if (
+              element.textContent.includes('3DVista') ||
+              (element.tagName === 'DIV' && element.getAttribute('style') === 'margin: 7px 5px !important; border-top: 1px solid rgb(170, 170, 170) !important; border-bottom: 1px solid rgb(255, 255, 255) !important; font-family: Arial !important; font-size: 13px !important; color: rgb(0, 0, 0) !important; opacity: 1 !important; display: block !important; pointer-events: all !important;')
+            ) {
+              element.parentNode.removeChild(element);
+            }
           }
         }
-      }
-
-      // Run the function every second
-      setInterval(removeElementsWithText, 1);
-    </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+        // Run the function every second
+        setInterval(removeElementsWithText, 1);
+      </script>    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta
       name="viewport"
       id="metaViewport"
